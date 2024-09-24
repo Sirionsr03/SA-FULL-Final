@@ -5,7 +5,8 @@ import { CreateOrder, CreateProductsOrder, GetProductsById ,CreateRoomChat,GetSe
 import "./BuyProducts.css";
 import { message ,Avatar ,Button} from "antd";
 import ShopRating from '../../Review/ReviewSeller/ShopRating';
-import Navbarproducts from "../../../component/navbarproducts";
+import Navbarproducts from "../../../component/navbarProducts.tsx";
+import NavbarMember from "../../../component/navbarMember.tsx";
 
 interface Products {
   Title: string;
@@ -204,14 +205,18 @@ const Byproduct: React.FC = () => {
           </div>
         </div>
       )}
-
-      <h1>{product.Title}</h1>
+      <NavbarMember/>
+      <h1
+      style={{
+        marginTop:"40px",
+        fontSize:"30px",
+        fontWeight:"bold"
+      }}
+      >{product.Title}</h1>
       <h2>฿{product.Price}</h2>
       <h3>จำนวน</h3>
-
-      <Navbarproducts/>
           <div className="frame-1">
-            <img src={product.PictureProduct} className="Bag" alt='Product' />
+            <img src={product.PictureProduct}  alt='Product' />
           </div>
 
           <Plus size={25} className="icon-plus" onClick={increaseQuantity} />
@@ -239,14 +244,10 @@ const Byproduct: React.FC = () => {
               </div>
 
             )}
-          </div>
-          <Button onClick={handleShopRating} type="primary" style={{ 
-            backgroundColor: '#ff8c1a',
-            borderColor: '#ff8c1a',
-            marginTop: 670,
-            marginLeft: 50}}>
+          </div >
+            <Button onClick={handleShopRating} className="buttonreview" type="primary">
                 ดูรีวิว
-          </Button>
+            </Button>
           <ShopRating
             sellerID={product.SellerID} // You can replace this with the actual seller ID
             visible={isShopRatingVisible}

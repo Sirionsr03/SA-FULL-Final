@@ -111,21 +111,25 @@
     overflow: auto;
   }
   
-  .wrapperproducts .siderbarproducts .sidebar-menuproducts{
+/* แก้ตรงนี้ */
+.wrapperproducts .siderbarproducts .sidebar-menuproducts{
+    margin-top: -70px; /* แก้ตรงนี้ */
     overflow: hidden;
   }
   
   .wrapperproducts .siderbarproducts .sidebar-menuproducts .profileproducts img {
     margin: 20px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 120px;/* แก้ตรงนี้ */
+    height: 120px;/* แก้ตรงนี้ */
+    border-radius: 70px;
+    margin-bottom: -55px;  /* แก้ตรงนี้ */
   }
   
-  .wrapperproducts .siderbarproducts .sidebar-menuproducts .profileproducts p{
+  .wrapperproducts .siderbarproducts .sidebar-menuproducts .username {
     color: #bbb;
+    cursor: pointer;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 50px; /* แก้ตรงนี้ */
   }
   
   .wrapperproducts .siderbarproducts .sidebar-menuproducts .itemproducts{
@@ -209,7 +213,7 @@
   }
   
   .wrapperproducts.collapseproducts .siderbarproducts .profileproducts img,
-  .wrapperproducts.collapseproducts .siderbarproducts .profileproducts p,
+  .wrapperproducts.collapseproducts .siderbarproducts .username,
   .wrapperproducts.collapseproducts .siderbarproducts a span{
     display: none;
   }

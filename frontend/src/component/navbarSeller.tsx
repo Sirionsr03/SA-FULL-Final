@@ -179,12 +179,15 @@ const NavbarSeller = () => {
       navigate('/createproducts'); // Navigate to ApplyToSeller page
       };
 
-    // const handleToChatSeller = () => {
-    //   navigate('/ChatSeller'); // Navigate to ApplyToSeller page
-    //   };
-    // const handleToMyOrder = () => {
-    //   navigate('/MyOrder'); // Navigate to ApplyToSeller page
-    // };
+    const handleToMyOrder = () => {
+      navigate('/MyOrder'); // Navigate to ApplyToSeller page
+    };
+    const handleToMyscore = () => {
+      navigate('/ReviewSeller'); // Navigate to ApplyToSeller page
+    };
+    const handleToMyCard = () => {
+      navigate('/Card'); // Navigate to ApplyToSeller page
+  };
 
 
     return (
@@ -219,7 +222,7 @@ const NavbarSeller = () => {
                                     />
                                 </div>
                             </li>
-                            <li><a href="#"><i className="fa-solid fa-search"> </i> </a></li>
+                            <li><a href="#"><i className="fa-solid fa-search" onClick={handleToMyCard}> </i> </a></li>
                             <li>
                               <button className="button-createproductseller" onClick={handleToCreateProducts}>เพิ่มสินค้า</button>
                             </li>
@@ -267,8 +270,8 @@ const NavbarSeller = () => {
                                 <i className="fas fa-shop"> </i><span>Market <i className="fas fa-chevron-down drop-downseller"></i></span>
                             </a>
                             <div className="sub-menuseller">
-                                <a > <i className="fas fa-cubes"></i><span>MyOrder</span></a>
-                                <a > <i className="fas fa-trophy"></i><span>Myscore</span></a>
+                                <a onClick={handleToMyOrder}> <i className="fas fa-cubes"></i><span>MyOrder</span></a>
+                                <a onClick={handleToMyscore}> <i className="fas fa-trophy"></i><span>Myscore</span></a>
                             </div>
                         </li>
 

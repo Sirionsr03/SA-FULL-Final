@@ -329,7 +329,8 @@ body{
 }
 
 .wrapper.collapse .siderbar .profile img,
-.wrapper.collapse .siderbar .profile p,
+.wrapper.collapse .siderbar .username,
+.wrapper.collapse .siderbar .username label,
 .wrapper.collapse .siderbar a span{
   display: none;
 }

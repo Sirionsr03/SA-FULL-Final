@@ -63,7 +63,6 @@
 
 
 import { useNavigate } from "react-router-dom";
-import profilepic from "../../src/assets/profilepic.jpg";
 import Logo from "../assets/logonew.png";
 import "./navbarProducts.css";
 import { useState, useEffect} from "react";
@@ -131,6 +130,10 @@ const Navbarproductsber = () => {
       navigate('/Profile'); // Navigate to ApplyToSeller page
       };
 
+    const handleToProfileEdit = () => {
+      navigate('/Profile/ProfileEdit/:id'); // Navigate to ApplyToSeller page
+      };
+
     const handleToOrder = () => {
       navigate('/Card'); // Navigate to ApplyToSeller page
       };
@@ -143,12 +146,15 @@ const Navbarproductsber = () => {
       navigate('/ChatBuyer'); // Navigate to ApplyToSeller page
       };
 
-    // const handleToChatSeller = () => {
-    //   navigate('/ChatSeller'); // Navigate to ApplyToSeller page
-    //   };
-    // const handleToMyOrder = () => {
-    //   navigate('/MyOrder'); // Navigate to ApplyToSeller page
-    // };
+    const handleToMyOrder = () => {
+      navigate('/MyOrder'); // Navigate to ApplyToSeller page
+      };
+    const handleToMyscore = () => {
+      navigate('/ReviewSeller'); // Navigate to ApplyToSeller page
+    };
+    const handleToMyCard = () => {
+        navigate('/Card'); // Navigate to ApplyToSeller page
+    };
 
 
     return (
@@ -172,18 +178,16 @@ const Navbarproductsber = () => {
                         </div>
 
                         <ul>
-
-
                             <li>
-                              <button className="button-createproductproducts" onClick={handleToApplyToSeller}>รีวิว</button>
+                              <button className="button-createproductproducts" >รีวิว</button>
                             </li>
                             
                             <li>
-                              <button className="button-createproductproducts" onClick={handleToApplyToSeller}>คะแนนร้านค้า</button>
+                              <button className="button-createproductproducts" >คะแนนร้านค้า</button>
                             </li>
                             
                             <li>
-                              <button className="button-createproductproducts" onClick={handleToApplyToSeller}>เพิ่มสินค้า</button>
+                              <button className="button-createproductproducts" >เพิ่มสินค้า</button>
                             </li>
 
                             <li><a onClick={handleToOrder}><i className="fa-solid fa-cart-shopping"> </i> </a></li>
@@ -197,7 +201,7 @@ const Navbarproductsber = () => {
                             <Avatar size={250} src={users?.ProfilePic || undefined} icon={!users?.ProfilePic && <UserOutlined />} />  
                         </center>
                         <center>
-                            <label className="username">{users?.Username}</label>
+                            <label className="username">{users?.Username}  <i className="fas fa-pen-to-square" onClick={handleToProfileEdit}></i> </label>
                         </center>
                         <li className="itemproducts" onClick={handleToHoproductsember}>
                             <a href="#" className="menu-btnproducts" > 
@@ -230,8 +234,8 @@ const Navbarproductsber = () => {
                                 <i className="fas fa-shop"> </i><span>Market <i className="fas fa-chevron-down drop-downproducts"></i></span>
                             </a>
                             <div className="sub-menuproducts">
-                                <a > <i className="fas fa-cubes"></i><span>MyOrder</span></a>
-                                <a > <i className="fas fa-trophy"></i><span>Myscore</span></a>
+                                <a onClick={handleToMyOrder}> <i className="fas fa-cubes"></i><span>MyOrder</span></a>
+                                <a onClick={handleToMyscore}> <i className="fas fa-trophy"></i><span>Myscore</span></a>
                             </div>
                         </li>
 

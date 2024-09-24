@@ -171,10 +171,10 @@ import categoryIcon1 from "../../../icon/book.png";
 import categoryIcon2 from "../../../icon/pen.png";
 import categoryIcon3 from "../../../icon/shoe.png";
 import categoryIcon4 from "../../../icon/electronics.png";
-import categoryIcon5 from "../../../icon/460230801_372939379221247_3630932967594282606_n.png";
-import categoryIcon6 from "../../../icon/460524660_838646431715865_5765693732975643543_n.png";
-import categoryIcon7 from "../../../icon/459515550_884766496934360_5182956364306110697_n.png";
-import categoryIcon8 from "../../../icon/459515550_884766496934360_5182956364306110697_n.png"
+import categoryIcon5 from "../../../icon/clothes.png";
+import categoryIcon6 from "../../../icon/beuty.png";
+import categoryIcon7 from "../../../icon/everything.png";
+import categoryIcon8 from "../../../icon/allItem.png";
 import {  GetProducts } from '../../../services/http';
 
 import "../home.css";
@@ -300,7 +300,14 @@ const handleCategoryClick = (categoryId: number | null) => {
               </Card>
             ))
           ) : (
-            <p>ไม่มีสินค้าที่แสดงผล</p>
+            <p
+            style={{
+              marginTop:"30px",
+              marginBottom:"30px",
+              fontSize:"20px",
+              fontWeight:"initial",
+              }}
+            >ไม่มีสินค้าที่แสดงผล</p>
           )}
         </div>
 
